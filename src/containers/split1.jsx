@@ -13,8 +13,8 @@ function Split1() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch(getContract1DataAsync())
-	}, [])
+		dispatch(getContract1DataAsync())	
+	}, [dispatch])
 
 	const handleFilterChange = (val) => {
 		dispatch(getFilterData(val))

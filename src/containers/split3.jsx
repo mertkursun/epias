@@ -10,9 +10,9 @@ function Split3() {
 	const dispatch = useDispatch();
 	const [isOpenForm, setIsOpenForm] = useState(false)
 
-	useEffect(() => {
+	useEffect( () => {
 		dispatch(getContract2DataAsync())
-	}, [])
+	}, [dispatch])
 
 	const handleAddButtonClick = () => {
 		setIsOpenForm(true)
@@ -20,7 +20,7 @@ function Split3() {
 
 	const handleAddFormSubmit = (e) => {
 		dispatch(addContract2Row(e.target))
-    e.preventDefault();
+		e.preventDefault();
 	}
 
 	return (
@@ -38,7 +38,7 @@ function Split3() {
 							<input type="text" name="label" placeholder="Kontrat giriniz" />
 							<input type="text" name="value" placeholder="Teklif giriniz" />
 							<input type="text" name="data" placeholder="Data giriniz" />
-							<input type="text" type="submit" value="Kaydet" />
+							<input type="submit" value="Kaydet" />
 						</form>
 					</div>
 				)}
